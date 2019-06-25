@@ -13,6 +13,7 @@
 		8234FD6822C20AC5004F285E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8234FD6722C20AC5004F285E /* Assets.xcassets */; };
 		8234FD6B22C20AC5004F285E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8234FD6922C20AC5004F285E /* LaunchScreen.storyboard */; };
 		8234FD7322C214F9004F285E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8234FD7222C214F8004F285E /* icon.png */; };
+		8234FD7622C21B54004F285E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234FD7522C21B54004F285E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8234FD6A22C20AC5004F285E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8234FD6C22C20AC5004F285E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8234FD7222C214F8004F285E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../icon.png; sourceTree = "<group>"; };
+		8234FD7522C21B54004F285E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		8234FD5F22C20AC0004F285E /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				8234FD7422C21941004F285E /* DataModels */,
 				8234FD6022C20AC1004F285E /* AppDelegate.swift */,
 				8234FD6222C20AC1004F285E /* TableViewController.swift */,
 				8234FD6422C20AC1004F285E /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				8234FD7222C214F8004F285E /* icon.png */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		8234FD7422C21941004F285E /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				8234FD7522C21B54004F285E /* User.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			files = (
 				8234FD6322C20AC1004F285E /* TableViewController.swift in Sources */,
 				8234FD6122C20AC1004F285E /* AppDelegate.swift in Sources */,
+				8234FD7622C21B54004F285E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
