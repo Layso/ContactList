@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Contacts" id="BYZ-38-t0r" customClass="TableViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,17 +73,17 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="5xJ-12-gdY" id="6b9-PG-5ph"/>
-                        <segue destination="hHJ-af-uwW" kind="show" identifier="showDetail" id="ygK-SA-xhN"/>
+                        <segue destination="hHJ-af-uwW" kind="show" identifier="showDetail" id="twG-bV-Uyu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-22" y="26"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Contact Details-->
         <scene sceneID="mqC-Yu-guc">
             <objects>
-                <viewController id="hHJ-af-uwW" customClass="DetailViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Contact Details" id="hHJ-af-uwW" customClass="DetailViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zyf-sQ-lO8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,6 +209,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k2B-f9-hTz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="C6i-sR-dcT"/>
                     <connections>
                         <outlet property="bigPicture" destination="cXQ-VD-uL3" id="b4X-3t-Epb"/>
                         <outlet property="cell" destination="M6q-cJ-FrJ" id="Bcp-ij-bLn"/>
@@ -221,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yb3-fX-EBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="26.53673163418291"/>
+            <point key="canvasLocation" x="814" y="25"/>
         </scene>
     </scenes>
 </document>

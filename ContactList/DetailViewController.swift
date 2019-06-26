@@ -23,13 +23,29 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         if let user = user {
-            bigPicture.image = UIImage(named: "icon.png")
+            let picUrl = URL(string: user.picture.large)
+            getImage(from: picUrl!)
             fullName.text = user.name.title.capitalized + " " + user.name.first.capitalized + " " + user.name.last.uppercased()
             mail.text = user.email
             phone.text = user.phone
             cell.text = user.cell
-            street.text = user.location.street
-            city.text = user.location.city
+            street.text = user.location.street.capitalized
+            city.text = user.location.city.capitalized
         }
+    }
+    
+    
+    func getImage(from url: URL) {
+        getData(from: url) {data, response, error in
+            guard let data = data, error == nil else {return}
+            DispatchQueue.main.async {
+                self.bigPicture.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 }

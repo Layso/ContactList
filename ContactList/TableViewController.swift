@@ -65,12 +65,7 @@ extension TableViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        
-        let user = userArray[indexPath.row]
-        cell.name.text = user.name.first.capitalized + " " + user.name.last.uppercased()
-        cell.mail.text = user.email
-        cell.thumbnail.image = UIImage(named: "icon.png")
-        
+        cell.setUser(user: userArray[indexPath.row], index: indexPath.row)
         return cell
     }
     
