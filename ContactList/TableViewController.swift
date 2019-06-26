@@ -12,6 +12,11 @@ class TableViewController: UIViewController {
 
     var requestUrl = "https://randomuser.me/api/?seed=yilmaz&results=50"
     var getMethod = "GET"
+    var userArray = [UserInformation]()
+    var selectedUser: UserInformation?
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +33,11 @@ class TableViewController: UIViewController {
                 let jsonDecoder = JSONDecoder()
                 let responseModel = try jsonDecoder.decode(RandomUser.self, from: data!)
                 for user in responseModel.results {
-                    print(user.name.title.capitalized + " " + user.name.first.capitalized + " " + user.name.last.uppercased())
-                    print(user.email)
-                    print(user.location.street + " - " + user.location.city)
-                    print()
+                    self.userArray.append(user)
+                }
+                print(self.userArray.count)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
             } catch let error {
                 print("JSON Serialization error: ", error)
@@ -39,5 +45,34 @@ class TableViewController: UIViewController {
         }.resume()
     }
 
+}
+
+extension TableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as? UserCell else {
+            return UITableViewCell()
+        }
+        
+        
+        let user = userArray[indexPath.row]
+        cell.name.text = user.name.first.capitalized + " " + user.name.last.uppercased()
+        cell.mail.text = user.email
+        cell.thumbnail.image = UIImage(named: "icon.png")
+        
+        return cell
+    }
+    
+    
+}
+
+
+extension TableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedUser = userArray[indexPath.row]
+    }
 }
 
