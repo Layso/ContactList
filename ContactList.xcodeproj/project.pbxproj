@@ -68,9 +68,9 @@
 				8234FD6222C20AC1004F285E /* TableViewController.swift */,
 				8234FD6422C20AC1004F285E /* Main.storyboard */,
 				8234FD6722C20AC5004F285E /* Assets.xcassets */,
+				8234FD7722C22712004F285E /* icon.png */,
 				8234FD6922C20AC5004F285E /* LaunchScreen.storyboard */,
 				8234FD6C22C20AC5004F285E /* Info.plist */,
-				8234FD7722C22712004F285E /* icon.png */,
 				8234FD7C22C3216F004F285E /* DetailViewController.swift */,
 			);
 			path = ContactList;

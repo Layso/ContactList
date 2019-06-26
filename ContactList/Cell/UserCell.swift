@@ -27,7 +27,7 @@ class UserCell: UITableViewCell {
         thumbnail.layer.cornerRadius = thumbnail.frame.height/2
         thumbnail.clipsToBounds = true
         
-        if (index%2 == 1) {
+        if (index%2 == 0) {
             backgroundColor = UIColor.lightGray
         }
         
