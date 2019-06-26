@@ -14,6 +14,7 @@
 		8234FD6B22C20AC5004F285E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8234FD6922C20AC5004F285E /* LaunchScreen.storyboard */; };
 		8234FD7622C21B54004F285E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234FD7522C21B54004F285E /* User.swift */; };
 		8234FD7822C22713004F285E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8234FD7722C22712004F285E /* icon.png */; };
+		8234FD7B22C28096004F285E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234FD7A22C28096004F285E /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8234FD6C22C20AC5004F285E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8234FD7522C21B54004F285E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8234FD7722C22712004F285E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		8234FD7A22C28096004F285E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		8234FD5F22C20AC0004F285E /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				8234FD7922C28056004F285E /* Cell */,
 				8234FD7422C21941004F285E /* DataModels */,
 				8234FD6022C20AC1004F285E /* AppDelegate.swift */,
 				8234FD6222C20AC1004F285E /* TableViewController.swift */,
@@ -76,6 +79,14 @@
 				8234FD7522C21B54004F285E /* User.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		8234FD7922C28056004F285E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8234FD7A22C28096004F285E /* UserCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8234FD7B22C28096004F285E /* UserCell.swift in Sources */,
 				8234FD6322C20AC1004F285E /* TableViewController.swift in Sources */,
 				8234FD6122C20AC1004F285E /* AppDelegate.swift in Sources */,
 				8234FD7622C21B54004F285E /* User.swift in Sources */,
