@@ -11,9 +11,10 @@ import UIKit
 class UserCell: UITableViewCell {
 
     
-    @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var mail: UILabel!
+    @IBOutlet weak var thumbnail: UIImageView!
+    
     
     
     func setUser(user: UserInformation, index: Int) {
@@ -26,10 +27,8 @@ class UserCell: UITableViewCell {
         thumbnail.layer.cornerRadius = thumbnail.frame.height/2
         thumbnail.clipsToBounds = true
         
-        if (index%2 == 0) {
-            backgroundColor = UIColor.red
-        } else {
-            backgroundColor = UIColor.orange
+        if (index%2 == 1) {
+            backgroundColor = UIColor.lightGray
         }
         
         name.text = user.name.first.capitalized + " " + user.name.last.uppercased()
