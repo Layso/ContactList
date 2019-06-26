@@ -45,6 +45,14 @@ class TableViewController: UIViewController {
         }.resume()
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailViewController = segue.destination as? DetailViewController else {
+            return
+        }
+        
+        detailViewController.user = self.selectedUser
+    }
 }
 
 extension TableViewController: UITableViewDataSource {
@@ -73,6 +81,7 @@ extension TableViewController: UITableViewDataSource {
 extension TableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedUser = userArray[indexPath.row]
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 }
 

@@ -15,6 +15,7 @@
 		8234FD7622C21B54004F285E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234FD7522C21B54004F285E /* User.swift */; };
 		8234FD7822C22713004F285E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8234FD7722C22712004F285E /* icon.png */; };
 		8234FD7B22C28096004F285E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234FD7A22C28096004F285E /* UserCell.swift */; };
+		8234FD7D22C3216F004F285E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234FD7C22C3216F004F285E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8234FD7522C21B54004F285E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8234FD7722C22712004F285E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
 		8234FD7A22C28096004F285E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		8234FD7C22C3216F004F285E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8234FD6922C20AC5004F285E /* LaunchScreen.storyboard */,
 				8234FD6C22C20AC5004F285E /* Info.plist */,
 				8234FD7722C22712004F285E /* icon.png */,
+				8234FD7C22C3216F004F285E /* DetailViewController.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				8234FD7B22C28096004F285E /* UserCell.swift in Sources */,
 				8234FD6322C20AC1004F285E /* TableViewController.swift in Sources */,
+				8234FD7D22C3216F004F285E /* DetailViewController.swift in Sources */,
 				8234FD6122C20AC1004F285E /* AppDelegate.swift in Sources */,
 				8234FD7622C21B54004F285E /* User.swift in Sources */,
 			);
